@@ -1,0 +1,259 @@
+/* =========================================
+   GLOBAL STYLES (Reset)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7; 
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* =========================================
+   HEADER SECTION STYLING
+   ========================================= */
+.top {
+    background-color: #ffffff;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4a90e2;
+}
+
+/* =========================================
+   MAIN CONTENT & PROFILE ALIGNMENT
+   ========================================= */
+main {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 70vh;
+}
+
+.intro-section {
+    max-width: 500px;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* --- PROFILE PICTURE CONTAINER --- */
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+/* ELEMENT: Profile Picture */
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    
+    /* -------------------------------------------------------------------------
+       NOTE: HD IMAGE CHANGE karne ke liye neeche diye gaye URL 'me1.jpg' ko 
+       apni actual image file name ya kisi bhi HD online image link se badal dein.
+       ------------------------------------------------------------------------- */
+    background-image: url("image/me1.jpeg"); 
+    
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 4px solid #fff;
+}
+
+/* =========================================
+   WORK SECTION (Project Grid)
+   ========================================= */
+#work {
+    padding: 60px 5%;
+    background-color: #e2dd99;
+    text-align: center;
+    min-height: 60vh;
+    border-top: 1px solid #000000;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-box {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fdfdfd;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.project-img {
+    height: 180px;
+    background-color: #eef2f5;
+}
+
+.project-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+footer {
+    background-color: #fff;
+    color: #666;
+    padding: 40px 10%;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #4a90e2;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   BUTTON STYLING (Back to Top)
+   ========================================= */
+#backToTop {
+    display: none; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 99;
+    justify-content: center;
+    align-items: center;
+}
+
+#backToTop:hover {
+    background-color: #357abd;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Mobile)
+   ========================================= */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .profile-container {
+        width: 100%;
+        justify-content: center;
+        padding-top: 0;
+    }
+    
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .intro-section {
+        width: 100%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* Internal styles go here */
+        .textstyle {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav></nav>
+    <header>
+        <h1 class="textstyle">Registration Form</h1>
+    </header>
+
+    <main>
+        <form action="http://tataplay/user/login.php" method="post">
+            <table border="0" cellpadding="10">
+                <caption>Registration</caption>
+
+                <tr>
+                    <td><label for="forname">Name</label></td>
+                    <td><input type="text" id="forname" name="fullname" placeholder="Type First Name" required
+                            title="Type name here"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="forage">Age</label></td>
+                    <td><input type="number" id="forage" name="age" min="18" max="41" placeholder="Type your age"
+                            required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="message">Message</label></td>
+                    <td><textarea id="message" name="message" rows="10" cols="40"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="F"> <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="o"> <label for="other">Other</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Hobby</label></td>
+                    <td>
+                        <input type="checkbox" id="reading" name="hobby" value="Reading"> <label
+                            for="reading">Reading</label>
+                        <input type="checkbox" id="writing" name="hobby" value="Writing"> <label
+                            for="writing">Writing</label>
+                        <input type="checkbox" id="dancing" name="hobby" value="Dancing"> <label
+                            for="dancing">Dancing</label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label for="dob">DOB</label></td>
+                    <td>
+                        <input type="date" name="dob" id="dob">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="time">TIME</label></td>
+                    <td>
+                        <input type="time" name="dob" id="time">
+                    </td>
+                </tr>
+                
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Register">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>

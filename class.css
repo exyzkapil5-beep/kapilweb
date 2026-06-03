@@ -1,0 +1,155 @@
+/* Global Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Header Style (Back Button + Title) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-3px);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Work Schedule Section */
+.schedule-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Accordion (Details/Summary) Styling */
+details {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+details[open] {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+summary {
+    list-style: none;
+    padding: 18px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    transition: color 0.3s ease;
+    color: #cbd5e1;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Default browser arrow ko hide karne ke liye */
+}
+
+details:hover summary {
+    color: #38bdf8;
+}
+
+/* Work Content Box Styling */
+.work-box {
+    padding: 20px;
+    margin: 0 15px 15px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.box-desc {
+    margin-top: 8px; 
+    font-size: 14px; 
+    opacity: 0.8;
+}
+
+/* Blue Box Colors (8:30) */
+.box-blue {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(14, 165, 233, 0.05));
+    border-left: 4px solid #0ea5e9;
+    color: #e0f2fe;
+}
+
+/* Purple Box Colors (9:30) */
+.box-purple {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.05));
+    border-left: 4px solid #8b5cf6;
+    color: #f5f3ff;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

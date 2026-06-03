@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7; 
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.main-header {
+    background-color: #ffffff;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #4a90e2;
+}
+
+
+#hero {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 70vh;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+
+.hero-image-wrap {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+.avatar-holder {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 4px solid #fff;
+}
+
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+#portfolio {
+    padding: 60px 5%;
+    background-color: #e2dd99;
+    text-align: center;
+    min-height: 60vh;
+    border-top: 1px solid #000000;
+}
+
+.grid-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fdfdfd;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-image-box {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #eef2f5;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card-details p {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+
+#main-footer {
+    background-color: #fff;
+    color: #666;
+    padding: 40px 10%;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #4a90e2;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+#scrollToTopBtn {
+    display: none; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 99;
+    justify-content: center;
+    align-items: center;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #357abd;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-image-wrap {
+        width: 100%;
+        justify-content: center;
+        padding-top: 0;
+    }
+    
+    .avatar-holder {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+    
+    .footer-wrap {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

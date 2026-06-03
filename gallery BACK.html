@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photo Gallery</title>
+<style>
+  @keyframes myani {
+      from {transform: scale(3);}
+      to {transform: scale(1);}
+  }
+
+  header {
+      width: 50%;
+      background: black;
+      color: white;
+      font-size: 50px;
+      box-shadow: 10px 10px 10px gray;
+      font-family: 'Arial Black';
+      text-align: center;
+      padding: 10px;
+      margin: auto;
+  }
+
+  .picstyle2 {
+      width: 70%;
+      margin: 40px;
+      margin-top: 10px;
+      box-shadow: 10px 10px 10px gray;
+      animation: myani 1.50s ease-out;
+  }
+
+  main {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+  }
+</style>
+</head>
+
+<body>
+<header>
+    WEB PHOTO GALLERY
+</header>
+
+<!-- Link to go back to main page -->
+<a href="photogallery.html">
+    <img src="images/2.jpeg" style="width:5%" title="Click to Close">
+</a>
+
+<main>
+    <!-- Change the source below to match your image name -->
+    <img src="images/p2.jpg" class="picstyle2">
+</main>

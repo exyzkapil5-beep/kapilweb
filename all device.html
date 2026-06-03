@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Responsive Profile</title>
+    <style>
+        2004 /* General Styles  */
+        div {
+           
+        }
+
+        #col1 {
+            height: 100px;
+            width: 20%;
+            margin: 10px;
+            border-radius: 100px;
+        }
+
+        #col2 {
+            width: 60%;
+            height: 200px;
+            margin: 10px;
+        }
+
+
+       
+
+.profile-pic {
+    width: 320px;
+    height: 320px;
+    border: 8px solid #336582; 
+    border-radius: 50%; 
+    background-image: url('images/7.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+        header {
+            border: 1px rgba(239, 0, 0, 0.948) solid;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+.profile-pic{
+    width: 320px;
+    height: 320px;
+    border: 8px solid #336582; 
+    border-radius: 50%; 
+    background-image: url('images/7.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+        main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .cardstyle {
+            width: 60%;
+            height: 180px;
+            box-shadow: 10px 10px 10px black;
+        }
+
+        .pic {
+            width: 100%;
+        }
+
+        /* Navigation Styles */
+        nav {
+            width: 90%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        nav ol li {
+            list-style: none;
+            background: teal;
+            margin-left: -2px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 10px 10px 10px black;
+            transition: 0.50s;
+        }
+
+        nav ol li:hover {
+            background: white;
+            transform: scale(1.10);
+        }
+
+        /* Footer & Social Media Styling (From Images) */
+        footer {
+            background: rgb(173, 0, 0);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 200px;
+            clear: both;
+        }
+
+        footer #info, #sitemap, #socialmedia {
+            width: 100%;
+            padding: 10px;
+        }
+
+        #sitemap ul li, #socialmedia ul li {
+            list-style: none;
+            text-align: left;
+            margin-left: 40%;
+        }
+
+        /* Link Styling */
+        a:link { color: yellow; text-decoration: none; }
+        a:visited { color: yellow; }
+        a:hover { text-decoration: underline; color: rgb(0, 255, 217); }
+        a:active { color: rgb(255, 166, 0); }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+            body { background: green; }
+            #col2 { display: none; }
+            header { justify-content: center; }
+            .cardstyle { margin: 40px auto auto auto; }
+            nav ol li { display: block; }
+        }
+
+        @media only screen and (min-width: 600px) {
+            body { background: yellow; }
+            #col2 { width: 70%; }
+            #col1 { width: 100px; height: 40px; }
+            main { justify-content: center; }
+            .cardstyle { width: 40%; margin: 10px; }
+            nav ol li { display: inline; }
+        }
+
+        @media only screen and (min-width: 768px) {
+            body { background: rgb(208, 105, 123); }
+            #col1 { width: 15%; height: 120px; }
+            #col2 { height: 200px; }
+            .cardstyle { width: 20%; margin: 10px; }
+        }
+
+        @media only screen and (min-width: 992px) {
+            body { background: rgb(173, 42, 42); }
+            #col2 { width: 90%; height: 400px; margin: auto; }
+            #col1 { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div id="col1"><img src="images/1.jpg.png" alt="100%"></div>
+        <div id="col2">banner</div>
+    </header>
+
+    <nav>
+      
+      <div box:black;></div>
+    </nav>
+
+    <main>
+        <div class="cardstyle" id="card2"><img src="images/r1.jpg.jpg" class="pic" style="height:100%;"></div>
+        <div class="cardstyle" id="card3"><img src="images/1.jpg.png"class="pic" style="height: 100%;"></div> 
+        <div class="cardstyle" id="card1"><img src="images/2.jpg.png" class="pic" style="height:100%;"></div>
+        <div class="cardstyle" id="card4"><img src="images/s2.jpg.jpg"class="pic" style="height: 100%;" ></div>
+        <div class="cardstyle" id="card5"><img src="images/r3.jpg.jpg"class="pic"style="height: 100%;"></div>
+        <div class="cardstyle" id="card6"><img src="images/1.jge.png"class="pic"style="height:100%;"></div>
+        <div class="cardstyle" id="card7"><img src="images/3.jpg.png"class="pic"style="height:100%;"></div>
+        <div class="cardstyle" id="card8"><img src="images/1.jpeg"class="pic" style="height: 100%;"></div>
+        <div class="cardstyle" id="card9"><img src="images/2.jpg"class="pic"style="height:100%;"></div>
+        <div class="cardstyle" id="card10"><img src="images/3.jpg"class="pic"style="height:100%;"></div>
+    
+    
+    </main>
+
+    <footer>
+        <div id="info">
+            <h1>ALL Right Reserved <sup></sup></h1>
+        </div>
+
+        <div id="sitemap">
+            <ul>
+                <li><a href="index.html">Home</a><div><style></style>
+                </div></li>
+                <li><a href="#">Practice Work</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="PHOTO A.html">Google</a></li>
+            </ul>
+        </div>
+
+        <div id="socialmedia">
+            <details>
+                <summary>Social Media</summary>
+                <ul>
+                    <li><a href="http://facebook.com"><img src="images/facebook..png" style="width:50px ;"></a></li>
+                    <li><a href="http://instagram.com"><img src="images/Instagram.png.png" style="width:50px;"></a></li>
+                    <li><a href="http://twitter.com"><img src="images/twitter.png.png" style="width:50px;"></a></li>
+                    <li><a href="http://youtube.com"><img src="images/youtub..png"alt="YouTube" style="width:50px;"></a></li>
+                </ul>
+            </details>
+        </div>
+    </footer>
+
+</body>
+</html>
