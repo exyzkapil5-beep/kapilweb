@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Kapil | UI/UX Portfolio</title>
+    
+   
+    <link rel="stylesheet" type="text/css" href="profile.css">
+</head>
+
+<body>
+ 
+    <header class="main-header">
+        <nav class="nav-bar">
+            <div class="brand-logo">PROFILE</div>          
+            <div class="nav-menu">
+                <a href="#hero">Home</a>
+                <a href="#portfolio">Work<link rel="stylesheet" type="text/css" href="profile.css">
+                <a href="#main-footer">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="hero">
+        <div class="hero-container">
+            
+
+            <div class="hero-text">
+                <h1>I am kapil UI/UX designer</h1>
+                <p>This is my simple website: a personal portfolio I created to showcase who I am, my skills, and my best work. It is clean, simple, and easy to navigate.</p>
+            </div>
+            
+            
+            <div class="hero-image-wrap">
+            
+                <div class="avatar-holder">
+                    <img src="image/me.1.jpeg" alt="Kapil Profile Picture" class="avatar-img">
+                </div>
+            </div>
+            
+        </div>
+    </main>
+>
+    <section id="portfolio">
+        <h2 class="grid-title">Work</h2>
+        
+        <div class="projects-grid">
+            
+            <a href="page.html"_blank class="project-card">
+                <div class="card-image-box">
+                    <img src="image/4.png" alt="Project One UI Design" class="card-img">
+                </div>
+                <div class="card-details">
+                    <h3>Class Work</h3>
+                    <p>UI Design</p>
+                </div>
+            </a>
+
+           <a href="https://your-project-2-link.com" target="_blank" class="project-card">
+                <div class="card-image-box">
+                    <img src="image/1..png" alt="Project Two UX Research" class="card-img">
+                </div>
+                <div class="card-details">
+                    <h3>Practice Work</h3>
+                    <p>UX Research</p>
+                </div>
+            </a>
+
+              <a href="https://your-project-3-link.com" target="_blank" class="project-card">
+                <div class="card-image-box">
+                    <img src="image/3..png" alt="Project Three Mobile App" class="card-img">
+                </div>
+                <div class="card-details">
+                    <h3>Graphic Designing</h3>
+                    <p>illustration</p>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+  
+    <footer id="main-footer">
+        <div class="footer-wrap">
+           
+            <div class="footer-links">
+                <a href="mailto:your-email@example.com">Email</a>
+                <a href="https://linkedin.com/in/your-username" target="_blank">LinkedIn</a>
+                <a href="https://behance.net/your-username" target="_blank">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <script>
+        const backToTopButton = document.getElementById("scrollToTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "flex"; 
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+        backToTopButton.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
