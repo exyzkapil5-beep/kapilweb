@@ -3,76 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work</title>
+    <title>Work Portfolio</title>
     <link rel="stylesheet" href="page.css">
 </head>
 <body>
-    <h1>Work</h1>
 
- 
-    <div class="section">
-        <div class="section-title" onclick="toggleSection('html-grid')">
-            <h2>HTML</h2>
-            <span class="arrow">^</span>
+    <div class="main-wrapper">
+        <h1 class="page-title">Work</h1>
+
+        <div class="component-group">
+            <input type="checkbox" id="toggle-section-1" class="component-checkbox" checked>
+            <label for="toggle-section-1" class="component-header">
+                <span>HTML+CSS</span>
+                <span class=""></span>
+            </label>
+            
+            <div class="component-body">
+                <div class="responsive-grid">
+                    
+                    <a href="class.html" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="image/4.png" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 1</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 2</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 3</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 4</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 5</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 6</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 7</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 8</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 9</div>
+                    </a>
+
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">HTML Project 10</div>
+                    </a>
+
+                </div>
+            </div>
         </div>
-        <div class="project-grid" id="html-grid">
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 1</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 2</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 3</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 4</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 5</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 6</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 7</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 8</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 9</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>HTML Project 10</h3></div></div>
+
+        <div class="component-group">
+            <input type="checkbox" id="toggle-section-2" class="component-checkbox">
+            <label for="toggle-section-2" class="component-header">
+                <span>JavaScript</span>
+                <span class=""></span>
+            </label>
+            <div class="component-body">
+                <div class="responsive-grid">
+                    
+                    <a href="" class="portfolio-card">
+                        <div class="card-media">
+                            <img src="" alt="Project Thumbnail" class="card-img">
+                        </div>
+                        <div class="card-details">JS Project 1</div>
+                    </a>
+
+                </div>
+            </div>
         </div>
+
     </div>
 
-  
-    <div class="section">
-        <div class="section-title" onclick="toggleSection('css-grid')">
-            <h2>CSS</h2>
-            <span class="arrow">▼</span>
-        </div>
-        <div class="project-grid" id="css-grid">
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 1</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 2</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 3</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 4</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 5</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 6</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 7</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 8</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 9</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>CSS Project 10</h3></div></div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title" onclick="toggleSection('js-grid')">
-            <h2>JavaScript</h2>
-            <span class="arrow">▼</span>
-        </div>
-        <div class="project-grid" id="js-grid">
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 1</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 2</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 3</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 4</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 5</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 6</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 7</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 8</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 9</h3></div></div>
-            <div class="project-box"><div class="project-img">📷</div><div class="project-info"><h3>JS Project 10</h3></div></div>
-        </div>
-    </div>
-
-    <script>
-        function toggleSection(gridId) {
-            const grid = document.getElementById(gridId);
-            grid.classList.toggle('show');
-        }
-    </script>
 </body>
 </html>
