@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<title>Photo Gallery</title>
+</head>
+
+<header>
+WEB PHOTO GALLERY
+</header>
+
+<style>
+
+@keyframes zoom
+{
+    from{transform:scale(0);}
+    to{transform:scale(1);}
+}
+
+header
+{
+width:50%;
+background:black;
+color:white;
+font-size:50px;
+box-shadow:10px 10px 10px gray;
+font-family:Arial black;
+text-align:center;
+padding:10px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.picstyle
+{
+width:200px;
+height:200px;
+margin:40px;
+box-shadow:10px 10px 10px gray;
+border-radius:40px;
+transition:0.20s;
+animation:zoom 1s;
+}
+
+.picstyle:hover
+{
+transform:scale(2.00);
+}
+
+main
+{
+width:80%;
+margin:auto;
+}
+
+</style>
+
+<body>
+
+<main>
+
+<a href="http://yahoo.com">
+<img src="image/6.jpg" class="picstyle">
+</a>
+
+<a href="http://yahoo.com">
+<img src="image/7.jpg" class="picstyle">
+</a>
+
+<a href="http://yahoo.com">
+<img src="image/8.jpg" class="picstyle">
+</a>
+
+<a href="http://yahoo.com">
+<img src="image/9.jpg" class="picstyle">
+</a>
+
+<a href="http://yahoo.com">
+<img src="image/10.jpg" class="picstyle">
+</a>
+
+<a href="http://yahoo.com">
+<img src="image/11.jpg" class="picstyle">
+</a>
+</main>
+
+</body>
+</html>

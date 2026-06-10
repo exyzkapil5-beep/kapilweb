@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Animation</title>
+</head>
+<style>
+
+@keyframes ani {
+    from { transform: rotateY(20deg) rotateX(10deg); }
+    to { transform: rotateY(400deg) rotateX(10deg); }
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}  
+
+body {
+    background-color: #f5f7fb; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
+
+#footer {
+    width: 100%;
+    height: auto;
+    color: white;
+    background: #0b1d3a;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+#container {
+    width: 100%; 
+    max-width: 500px; 
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    perspective: 1000px;
+    background: transparent; 
+    position: relative;
+}
+
+#p30 {
+    width: 300px;
+    height: 300px;
+    background: transparent; 
+    position: absolute; 
+    animation: ani 5s linear infinite alternate;
+    transform-style: preserve-3d;
+}
+
+#p33 {
+    width: 300px;
+    height: 300px;
+    background: transparent; 
+    position: absolute;
+    backface-visibility: hidden;
+    animation: ani 5s linear infinite alternate;
+    transform-style: preserve-3d;
+}
+
+.pic {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.5); 
+    background: transparent;
+}
+
+
+@media (max-width:600px) {
+    #container {
+        height: 350px; 
+        margin-top: 50px;
+    }
+
+    #p30, #p33 {
+        width: 250px; 
+        height: 250px;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    #footer {
+        margin-top: 100px;
+        font-size: 14px;
+    }
+}
+
+</style>
+<body>
+    <header>3D Transform-Animation</header>
+    
+    <div id="container">
+        <div id="p30">
+            <img src="image/10.jpg" class="pic">
+        </div>
+        <div id="p33">
+            <img src="image/15.jpg" class="pic">
+        </div>
+    </div>
+</body>
+</html>
