@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login</title>
+    
+    <style>
+       body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+       input[type="submit"] {
+            background-color: #007bff; 
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;            
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <form action="TEST.HTML" method="post">
+            <table border="0" cellpadding="10">
+                <caption> <h1>Login</h1></caption>
+                
+                <tr>
+                    <td><label for="userid">Login ID</label></td>
+                    <td>
+                        <input placeholder="type user id" id="userid" type="text" name="userid">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="upass">Password</label></td>
+                    <td>
+                        <input placeholder="password" type="password" id="upass" name="upass">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label for="umobile">Number</label></td>
+                    <td>
+                        <input placeholder="mobile" type="number" id="umobile" name="umobile">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Login">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+</body>
+</html>

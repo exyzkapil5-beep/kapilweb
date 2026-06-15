@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Flight Menu</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        header {
+            background: #216b92;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        
+        #menu {
+            margin: 20px;
+            width: 150px;
+            position: relative;
+        }
+
+                .ri-menu-line {
+            font-size: 28px;
+            cursor: pointer;
+            color:#216b92;
+        }
+
+        
+        ol {
+            list-style: none;
+            background: #216b92;
+            margin-top: 5px;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s ease;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        
+        ol li a {
+            display: block;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        
+        ol li a:hover {
+            background: #1e3c72;
+            border-radius: 5px;
+        }
+
+        
+        #menu:hover ol {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        
+        @media (max-width: 600px) {
+            header {
+                font-size: 24px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>Flight-Menu</header>
+
+    <main>
+        <div id="menu">
+            <i class="ri-menu-line"></i>
+            
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="all practice work.html">Practice Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ol>
+        </div>
+    </main>
+
+</body>
+</html>
+
+
