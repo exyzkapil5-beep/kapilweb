@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 30%;
+      height: 160px;
+      border: 1px black solid;
+      box-shadow: 10px 10px 10px gray;
+      border-radius: 10px;
+      transition: 2s;
+      text-align: center;
+      position: absolute;
+      background: yellow;
+      left: 110px;
+      top: 3dvb;
+    }
+  </style>
+</head>
+<body>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus minima tempore error fuga ullam, debitis ex nulla sed non expedita consequatur enim, aliquid quae explicabo nemo at, eos dolor corporis.
+    Distinctio amet accusantium sit nisi corrupti soluta, quasi iste. Nulla asperiores cum ad deserunt dicta a, atque consequatur architecto, doloremque rem porro magni quia mollitia, eum voluptas excepturi aspernatur libero?
+    Commodi ipsam esse repellat repellendus officiis, nulla quo accusantium facere quas recusandae Enim debitis eos nulla doloribus autem ipsa ea porro, delectus aspernatur iure at sunt numquam atque inventore!
+  </p>
+
+  <script>
+    var d = document.createElement("div");
+
+    function show_add() {
+      document.body.appendChild(d);
+      d.className = "box";
+
+      d.innerHTML = "<div id='cross' style='cursor:pointer;text-align:right;padding-right:7px;font-size:10px;' onclick='document.body.removeChild(d)'>X</div>";
+      d.innerHTML += "Amazon";
+      d.innerHTML += "<hr/>";
+      d.innerHTML += "<img style='width:96%;height:100px;margin:2px;' src='images/p1.jpg'>";
+      
+      document.title = "Ready";
+    }
+
+    var t = setTimeout("show_add()", 1000 * 5);
+    // var t = setInterval("show_add()",1000*5)
+
+    /* closing Add Automatically */
+    function close_add() {
+      document.body.removeChild(d);
+    }
+
+    var t2 = setTimeout("close_add()", 10000);
+  </script>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, est, esse quasi doloribus porro iure nihil tempora eum quidem quia harum, necessitatibus quis eaque iste iusto exercitationem dolor debitis at.
+    Expedita illum libero, quia aut, unde, fugit deserunt nesciunt autem saepe accusamus aliquid facere! Quo exercitationem assumenda recusandae deleniti, mollitia fugiat dolorem ab accusantium aspernatur ea quas, hic repellendus soluta.
+    Architecto illo autem officia dicta facilis veritatis, ducimus temporibus libero consectetur. Eveniet, nobis recusandae eos vel dolor obcaecati molestiae? Expedita sint veritatis eos incidunt, porro facere sequi blanditiis odit quidem.
+    Cumque hic dignissimos eos cupiditate esse doloribus, inventore pariatur harum. Voluptas at magnam ratione voluptatum autem sunt sint, provident recusandae architecto porro non voluptate tempore? Vel aut atque consequuntur eaque.
+    voluptas non quidem voluptatem laborum maxime quibusdam, voluptatibus in totam soluta numquam? Fugit debitis voluptatibus similique ullam quae.
+    Facilis, dolorem consectetur! Eos aperiam aspernatur, suscipit animi obcaecati veritatis eum repudiandae necessitatibus ad culpa similique ut dignissimos fugiat quaerat quia eaque ipsum iure asperiores quas optio sapiente! Nemo, ipsam.
+  </p>
+
+</body>
+</html>

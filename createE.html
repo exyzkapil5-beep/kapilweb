@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>creating Element In javascript</h1>
+
+    <script>
+      var p = document.createElement("img");
+      document.body.appendChild(p);
+      p.src = "image/57.jpg";
+      p.style = "width:30%;cursor:pointer;";
+      p.style.boxShadow = "10px 10px 10px gray";
+      p.style.border = "2px blue ridge";
+      p.style.borderRadius = "10px";
+
+      p.onclick = function () {
+        p.src = "image/1.png";
+        document.bgColor = "black";
+      };
+      p.onclick = function () {
+        p.src = "image/2.png";
+        document.bgColor = "white";
+      };
+
+      p.onmouseout = function () {
+        p.src = "image/2.png";
+        document.bgColor = "white";
+      };
+    </script>
+  </body>
+</html>
