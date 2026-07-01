@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #pic 
+    {
+        width: 200px;
+        height: 200px;
+        box-shadow: 10px 10px 10px gray;
+    }
+</style>
+<body>
+    <h1>Working With JavaSript</h1>
+
+    <img id="pic" src="image/14.jpg" alt="Image">
+
+    <h1>About Programing</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum non necessitatibus sit esse possimus, ex exercitationem earum nam porro aut voluptas incidunt quos soluta similique neque aliquam fuga repellendus!
+      Recusandae nemo, ratione nam, ab, animi quam repellat doloribus ipsum modi aperiam molestias molestiae? Quod, nostrum impedit provident vero facilis obcaecati maiores quas voluptatem ipsa. Qui voluptate molestiae quod fuga?
+      Magnam ducimus iure, repudiandae architecto fugiat consectetur aliquid quis iste voluptatem consequuntur. Labore possimus eos laudantium aspernatur delectus. Tempora, aperiam rem maxime nesciunt exercitationem ipsa quasi alias amet voluptatem officia.
+      Modi, esse! Dolores est inventore quis quisquam delectus rerum. Itaque eum neque nihil veritatis aliquid. Veritatis, iure. Aperiam minus optio odit alias ab. Impedit provident beatae, vel sint illum quos?
+    </p>
+
+    <script>
+        var p = document.getElementById("pic");
+        var h = document.getElementsByTagName("h1");
+
+        h[0].onmouseover = function() 
+        {
+            this.style.color = "red";
+            this.style.transition = "0.50s";
+            this.style.cursor = "pointer";
+            this.style.marginLeft = "320px";
+            this.style.transform = "scale(1.50)";
+        }
+
+        h[0].onmouseout = function() 
+        {
+            this.style.color = "black";
+            this.style.transform = "scale(1)";
+            this.style.marginLeft = "0px";
+        }
+
+        p.onclick = function() 
+        {
+            p.src = "image/15.jpg";
+        }
+
+        document.title = "Ready";
+    </script>
+</body>
+</html>
