@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Clock</title>
+    <style>
+        .mystyle {
+            color: red;
+            font-size: 50px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="clock" class="mystyle"></div>
+
+    <script>
+    
+        var d = new Date();
+        var b = document.getElementById("clock");
+        b.innerHTML = d.toLocaleTimeString();
+    </script>
+
+</body>
+</html>

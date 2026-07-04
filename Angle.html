@@ -48,8 +48,68 @@
             top: 100px;
             animation: ani1 6s infinite alternate;
         }
+
+        .back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    z-index: 9999;
+
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #30e7fc;
+}
+
+.back-btn:active {
+    animation: blink 0.3s ease;
+}
+.body {
+ position: absolute;
+ left: 100px;
+ top: 1px;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    z-index: 9999;
+
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #30e7fc;
+}
+
+.back-btn:active {
+    animation: blink 0.3s ease;
+}
     </style>
 </head>
+<a href="page.html" class="back-btn">
+    ← Back
+</a>
 <body>
     <div id="container">
         <div id="box">

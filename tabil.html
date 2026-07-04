@@ -61,6 +61,31 @@
         .even {
             background-color: #f7f6ff;
         }
+        .back-btn {
+    position: fixed;
+    top: 5px;
+    left: 15px;
+
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    z-index: 9999;
+
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #30e7fc;
+}
+
+.back-btn:active {
+    animation: blink 0.3s ease;
+}
     </style>
 </head>
 <header>
@@ -78,6 +103,9 @@
 		</nav>
 </header>
 
+<a href="page.html" class="back-btn">
+    ← Back
+</a>  
 <body>
 
     <main>

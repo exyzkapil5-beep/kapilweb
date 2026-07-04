@@ -7,6 +7,50 @@
 
 <title>my marks</title>
 <style>
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    color: #f0efef;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    z-index: 9999;
+
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #30e7fc;
+}
+
+.back-btn:active {
+    animation: blink 0.3s ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    
+.back-btn {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+}
 html
 {
 scroll-behavior:smooth;
@@ -88,6 +132,10 @@ margin-top:50px;
 }
 
 </style>
+
+<a href="page.html" class="back-btn">
+    ← Back
+</a>  
 <a name="top">
 
 <header>

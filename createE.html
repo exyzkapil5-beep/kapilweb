@@ -5,13 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <a href="page.html" class="back-btn">
+    ← Back
+</a> 
+<style>.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    z-index: 9999;
+
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #30e7fc;
+}
+
+.back-btn:active {
+    animation: blink 0.3s ease;
+}
+.{
+  position: absolute;
+  left: 100px;  
+  top: 1px;
+}
+
+</style> 
   <body>
-    <h1>creating Element In javascript</h1>
+    <h1 class="text">creating Element In javascript</h1>
 
     <script>
       var p = document.createElement("img");
       document.body.appendChild(p);
-      p.src = "image/57.jpg";
+      p.src = "image/61.jpg";
       p.style = "width:30%;cursor:pointer;";
       p.style.boxShadow = "10px 10px 10px gray";
       p.style.border = "2px blue ridge";
@@ -22,14 +57,15 @@
         document.bgColor = "black";
       };
       p.onclick = function () {
-        p.src = "image/2.png";
+        p.src = "image/10.jpg";
         document.bgColor = "white";
       };
 
       p.onmouseout = function () {
-        p.src = "image/2.png";
+        p.src = "image/61.jpg";
         document.bgColor = "white";
       };
+      
     </script>
   </body>
 </html>

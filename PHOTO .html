@@ -7,8 +7,11 @@
 <header>
 WEB PHOTO GALLERY
 </header>
+<a href="page.html" class="back-btn">
+    ← Back
+</a>  
 
-<style>  
+<style>
 
 @keyframes zoom
 {
@@ -52,6 +55,31 @@ width:80%;
 margin:auto;
 }
 
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 1px;
+
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    user-select: none;
+
+    z-index: 9999;
+
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #30e7fc;
+}
+
+.back-btn:active {
+    animation: blink 0.3s ease;
+}
 </style>
 
 <body>
