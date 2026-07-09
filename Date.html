@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Clock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Clock</title>
     <style>
-        .mystyle {
-            color: red;
-            font-size: 50px;
-            font-family: Arial, sans-serif;
-        }
+   .mystyle {
+
+    font-size: 40px;           
+    font-family: 'Segoe UI', ;
+    font-weight: bold;         
+    cursor: pointer;
+    width: 350px;
+    padding: 20px;
+    background: #6288d9;      
+    border-radius: 15px;      
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    color: black;            
+    transition: 0.3s;         
+}
     </style>
 </head>
 <body>
@@ -15,10 +27,42 @@
     <div id="clock" class="mystyle"></div>
 
     <script>
-    
-        var d = new Date();
         var b = document.getElementById("clock");
-        b.innerHTML = d.toLocaleTimeString();
+        var t = setInterval(run_clock, 1000);
+        var isStopped = false;
+
+        function run_clock() {
+            var d = new Date();
+            b.innerHTML = d.toLocaleTimeString();
+            var s = d.getSeconds();
+
+          
+            if (s > 10 && s <= 15) {
+                document.body.style.backgroundColor = "green";
+            } else if (s > 15) {
+                document.body.style.backgroundColor = "yellow";
+            } else {
+                document.body.style.backgroundColor = "grey";
+            }
+
+           
+            if (s === 5) {
+            alert("hello World");
+            }
+        }
+
+        
+        b.onclick = function() {
+            if (isStopped == false) {
+                clearInterval(t);   
+                isStopped = true;    
+                b.style.border = "5px solid red"; 
+            } else {
+                t = setInterval(run_clock, 1000); 
+                isStopped = false;   
+                b.style.border = "none"; 
+            }
+        };
     </script>
 
 </body>
