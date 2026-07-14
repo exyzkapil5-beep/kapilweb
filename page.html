@@ -1,297 +1,356 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Work Portfolio</title>
-    
-</head>
-<style>
+  </head>
+  <style>
     * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-body {
-    background-color: #b9e9e7;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-}
+    body {
+      background-color: #b9e9e7;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
 
-.main-wrapper {
-    width: 100%;
-    max-width: 1400px;
-}
+    .main-wrapper {
+      width: 100%;
+      max-width: 1400px;
+    }
 
-.page-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 30px;
-}
+    .page-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 30px;
+    }
 
+    .component-group {
+      margin-bottom: 15px;
+    }
 
-.component-group {
-    margin-bottom: 15px;
-}
+    .component-checkbox {
+      display: none;
+    }
 
+    .component-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 18px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      font-weight: bold;
+      font-size: 18px;
+      color: #000000;
+      user-select: none;
+    }
 
-.component-checkbox {
-    display: none;
-}
+    .component-header .header-icon {
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #c6dfdf;
+      transition: transform 0.2s ease;
+    }
 
+    .component-body {
+      max-height: 0;
+      overflow: hidden;
+      transition:
+        max-height 0.3s ease-out,
+        padding 0.3s ease;
+      padding: 0 5px;
+    }
 
-.component-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 18px 24px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    font-weight: bold;
-    font-size: 18px;
-    color: #000000;
-    user-select: none;
-}
+    .component-checkbox:checked ~ .component-body {
+      max-height: 2000px;
+      padding: 20px 5px;
+    }
 
+    .component-checkbox:checked ~ .component-header .header-icon {
+      transform: rotate(180deg);
+    }
 
-.component-header .header-icon {
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid #c6dfdf;
-    transition: transform 0.2s ease;
-}
+    .responsive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 16px;
+    }
 
+    .portfolio-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
 
-.component-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease;
-    padding: 0 5px;
-}
+    .portfolio-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
 
+    .card-media {
+      background-color: #dedede;
+      height: 120px;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.component-checkbox:checked ~ .component-body {
-    max-height: 2000px; 
-    padding: 20px 5px;
-}
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.component-checkbox:checked ~ .component-header .header-icon {
-    transform: rotate(180deg);
-}
+    .card-details {
+      padding: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000000;
+      background-color: #aed9e573;
+    }
+  </style>
 
-
-.responsive-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 16px;
-}
-
-
-.portfolio-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
-    text-decoration: none; 
-    color: inherit;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-
-.portfolio-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
-
-
-.card-media {
-    background-color: #dedede;
-    height: 120px;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block;
-}
-
-.card-details {
-    padding: 12px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #000000;
-    background-color: #aed9e573;
-}
-</style>
-
-<body>
-
+  <body>
     <div class="main-wrapper">
-        <h1 class="page-title">Work</h1>
+      <h1 class="page-title">Work</h1>
 
-        <div class="component-group">
-            <input type="checkbox" id="toggle-section-1" class="component-checkbox" checked>
-            <label for="toggle-section-1" class="component-header">
-                <span>HTML+CSS</span>
-                <span class=""></span>
-            </label>
-            
-            <div class="component-body">
-                <div class="responsive-grid">
-                    
-                    <a href="3D.html" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="image/4.png" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">animation </div>
-                    </a>
+      <div class="component-group">
+        <input
+          type="checkbox"
+          id="toggle-section-1"
+          class="component-checkbox"
+          checked
+        />
+        <label for="toggle-section-1" class="component-header">
+          <span>HTML+CSS</span>
+          <span class=""></span>
+        </label>
 
-                    <a href="PHOTO .html" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://img.freepik.com/premium-photo/creative-dark-coding-background-with-text-programming-future-concept-3d-rendering_670147-56604.jpg" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">photo gallery</div>
-                    </a>
+        <div class="component-body">
+          <div class="responsive-grid">
+            <a href="3D.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="image/4.png"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">animation</div>
+            </a>
 
-                    <a href="login.html" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://img.freepik.com/free-vector/digital-code-abstract-3d-polygonal-wireframe-airplane-blue-night-sky-with-dots-stars-illustration-background_587448-634.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">LOGING</div>
-                    </a>
+            <a href="PHOTO .html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://img.freepik.com/premium-photo/creative-dark-coding-background-with-text-programming-future-concept-3d-rendering_670147-56604.jpg"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">photo gallery</div>
+            </a>
 
-                    <a href="Slider manu.html" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://img.magnific.com/free-vector/futuristic-cyberspace-binary-code-number-background-design_1017-60274.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">Flight Manu</div>
-                    </a>
+            <a href="login.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://img.freepik.com/free-vector/digital-code-abstract-3d-polygonal-wireframe-airplane-blue-night-sky-with-dots-stars-illustration-background_587448-634.jpg?semt=ais_hybrid&w=740&q=80"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">LOGING</div>
+            </a>
 
-                    <a href="" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://img.magnific.com/premium-photo/creative-coding-html-language-blurry-wallpaper-web-developer-programming-concept_670147-63700.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">HTML</div>
-                    </a>
+            <a href="Slider manu.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://img.magnific.com/free-vector/futuristic-cyberspace-binary-code-number-background-design_1017-60274.jpg?semt=ais_hybrid&w=740&q=80"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">Flight Manu</div>
+            </a>
 
-                    <a href="" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://img.freepik.com/premium-photo/ai-with-flying-binary-green-code-creative-background-programming-artificial-intelligence_338491-26364.jpg" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">HTML</div>
-                    </a>
+            <a href="" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://img.magnific.com/premium-photo/creative-coding-html-language-blurry-wallpaper-web-developer-programming-concept_670147-63700.jpg?semt=ais_hybrid&w=740&q=80"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">HTML</div>
+            </a>
 
-                    <a href="" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://c8.alamy.com/comp/2D2WYM1/abstract-futuristic-background-of-matrix-style-binary-code-built-into-hud-elements-digital-systems-technology-cyber-internet-or-network-concept-2D2WYM1.jpg" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">HTML</div>
-                    </a>
+            <a href="" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://img.freepik.com/premium-photo/ai-with-flying-binary-green-code-creative-background-programming-artificial-intelligence_338491-26364.jpg"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">HTML</div>
+            </a>
 
-                    <a href="div .html" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtV-U5i2bMVDkJQr4FzXhjJNpGZ9_28uTTuA&s" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">Table</div>
-                    </a>
+            <a href="" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://c8.alamy.com/comp/2D2WYM1/abstract-futuristic-background-of-matrix-style-binary-code-built-into-hud-elements-digital-systems-technology-cyber-internet-or-network-concept-2D2WYM1.jpg"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">HTML</div>
+            </a>
 
-                    <a href="book.html" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://media.istockphoto.com/id/2202192032/photo/open-book-with-digital-data-stream-in-a-library.jpg?s=612x612&w=0&k=20&c=0YXQ3wi99mDT7KhP0Mzzz8oxlbx6g5MG3J9TR9y1p4Y=" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">BOOK PAGE </div>
-                    </a>
+            <a href="div .html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtV-U5i2bMVDkJQr4FzXhjJNpGZ9_28uTTuA&s"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">Table</div>
+            </a>
 
-                    <a href="" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh-72J7Lc0AFPcEf42PyV5sYd8aavpwBCEgAZ6wWsuxWOxivmmQixqakk&s=10" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">HTML</div>
-                    </a>
+            <a href="book.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://media.istockphoto.com/id/2202192032/photo/open-book-with-digital-data-stream-in-a-library.jpg?s=612x612&w=0&k=20&c=0YXQ3wi99mDT7KhP0Mzzz8oxlbx6g5MG3J9TR9y1p4Y="
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">BOOK PAGE</div>
+            </a>
 
-                </div>
-            </div>
+            <a href="" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh-72J7Lc0AFPcEf42PyV5sYd8aavpwBCEgAZ6wWsuxWOxivmmQixqakk&s=10"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">HTML</div>
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div class="component-group">
-            <input type="checkbox" id="toggle-section-2" class="component-checkbox">
-            <label for="toggle-section-2" class="component-header">
-                <span>JavaScript</span>
-                <span class=""></span>
-            </label>
-            <div class="component-body">
-                <div class="responsive-grid">
-                    
-                    <a href="mesege.html" class="portfolio-card">
-                        <div class="card-media">
-                            <img src="https://www.shutterstock.com/image-photo/ai-powered-personalized-elearning-concept-260nw-2666754847.jpg" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">Message,Tabe</div>
-                    </a>
+      <div class="component-group">
+        <input
+          type="checkbox"
+          id="toggle-section-2"
+          class="component-checkbox"
+        />
+        <label for="toggle-section-2" class="component-header">
+          <span>JavaScript</span>
+          <span class=""></span>
+        </label>
+        <div class="component-body">
+          <div class="responsive-grid">
+            <a href="mesege.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://www.shutterstock.com/image-photo/ai-powered-personalized-elearning-concept-260nw-2666754847.jpg"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">Message,Tabe</div>
+            </a>
 
-                    <a href="createE.html" class="portfolio-card">
-                        <div class="card-media"> 
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUA8Sz7FLPlLZMK3VCbw9stnylWY4VBQIDY-mRlGZtGD4PBF20rp3f6Q&s=10" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">click photo</div>
-                    </a>
-                        <a href="cr.html" class="portfolio-card">
-                        <div class="card-media"> 
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1M7HjNDVTuYbixOZE63QBacyXiVUim_R4wwk0CBefNw&s=10" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">pop out message</div>
-                    </a>
-                        <a href="30.html" class="portfolio-card">
-                        <div class="card-media"> 
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQe-O5ChfDNbXC7-vt1SakDrHk_wx1B0lxLWTAIAaHQ&s=10" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">GetElement </div>
-                    </a> 
-                     <a href="Date.html" class="portfolio-card">
-                        <div class="card-media"> 
-                            <img src="https://codingstella.com/wp-content/uploads/2024/06/IMG_20240623_120535.jpg" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">Date,Time </div>
-                    </a>  
-                     <a href="image_of_the_day.html" class="portfolio-card">
-                        <div class="card-media"> 
-                            <img src="https://cdn.britannica.com/29/153629-050-7590A6D1/calendar-datess.jpg" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">Image of the days </div>
-                    </a> 
-                     <a href="video_timeout.html" class="portfolio-card">
-                        <div class="card-media"> 
-                            <img src="https://www.shutterstock.com/image-vector/video-player-260nw-457651381.jpg" alt="Project Thumbnail" class="card-img">
-                        </div>
-                        <div class="card-details">Video Timeout </div>
-                    </a> 
-                    
-                </div>
-
-                
-            </div>
+            <a href="createE.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmUA8Sz7FLPlLZMK3VCbw9stnylWY4VBQIDY-mRlGZtGD4PBF20rp3f6Q&s=10"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">click photo</div>
+            </a>
+            <a href="cr.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1M7HjNDVTuYbixOZE63QBacyXiVUim_R4wwk0CBefNw&s=10"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">pop out message</div>
+            </a>
+            <a href="30.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQe-O5ChfDNbXC7-vt1SakDrHk_wx1B0lxLWTAIAaHQ&s=10"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">GetElement</div>
+            </a>
+            <a href="Date.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://codingstella.com/wp-content/uploads/2024/06/IMG_20240623_120535.jpg"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">Date,Time</div>
+            </a>
+            <a href="image_of_the_day.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://cdn.britannica.com/29/153629-050-7590A6D1/calendar-datess.jpg"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">Image of the days</div>
+            </a>
+            <a href="video_timeout.html" class="portfolio-card">
+              <div class="card-media">
+                <img
+                  src="https://www.shutterstock.com/image-vector/video-player-260nw-457651381.jpg"
+                  alt="Project Thumbnail"
+                  class="card-img"
+                />
+              </div>
+              <div class="card-details">Video Timeout</div>
+            </a>
+          </div>
         </div>
-
+      </div>
     </div>
-
-</body> 
+  </body>
 </html>
