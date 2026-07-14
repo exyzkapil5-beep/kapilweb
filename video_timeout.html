@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Slider</title>
+
+<style>
+
+body{
+    text-align:center;
+}
+
+#video{
+    width:70%;
+    height:400px;
+    box-shadow:10px 10px 10px gray;
+}
+.back-btn{
+    position:fixed;
+    top:10px;
+    left:10px;
+    padding: 9px 10px;
+    font-size:18px;
+    background:rgb(0, 0, 0);
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    box-shadow:5px 5px 10px gray;
+}
+
+.back-btn:hover{
+    background:rgba(139, 0, 0, 0.885);
+}
+
+</style>
+
+</head>
+<a href="page.html" class="back-btn">← Back</a>
+
+<video id="video" autoplay muted></video>
+
+<body onload="show()">
+
+
+
+
+<script>
+
+var video = document.getElementById("video")
+var today = 1
+
+function show()
+{
+    if(today <7)
+    {
+        today++
+    }
+    else
+    {
+        today = 1
+    }
+
+    document.title = today
+
+    if(today == 1)
+    {
+       video.src = "video/cola1.mp4"
+    }
+
+    if(today == 2)
+    {
+        video.src = "video/cola2.mp4"
+    }
+
+    if(today == 3)
+    {
+        video.src = "video/cola3.mp4"
+    }
+
+    if(today == 4)
+    {
+        video.src = "video/lays1.mp4"
+    }
+
+    if(today == 5)
+    {
+        video.src = "video/lays2.mp4"
+    }
+
+    if(today == 6)
+    {
+        video.src = "video/bike1.mp4"
+    }
+
+    if(today == 7)
+    {
+        video.src = "video/bike2.mp4"
+    }
+
+   video.load()
+   video.play()
+
+    setTimeout(show, 5000)
+}
+
+</script>
+
+</body>
+</html>

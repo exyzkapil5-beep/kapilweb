@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mystyle {
+            color: red;
+            font-size: 30px;
+            font-family: Arial, black;
+            cursor: pointer;
+            width: 200px;
+            box-shadow: 10px 10px 10px gray;
+            padding: 10px;
+            background: yellow;
+        }
+        header {
+            text-align: center;
+        }
+        #pic {
+            width: 50%;
+            height: 240px;
+            box-shadow: 10px 10px 10px gray;
+        }
+        body {
+            text-align: center;
+        }
+        .back-btn{
+    position:fixed;
+    top:10px;
+    left:10px;
+    padding: 9px 10px;
+    font-size:18px;
+    background:rgb(0, 0, 0);
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    box-shadow:5px 5px 10px gray;
+}
+
+.back-btn:hover{
+    background:rgba(139, 0, 0, 0.885);
+}
+
+    </style>
+</head>
+<a href="page.html" class="back-btn">← Back></a>
+<body>
+    <header>
+        <img id="pic" src="image/55.jpg">
+    </header>
+    <div id="mes"></div>
+
+    <script>
+        var mes = document.getElementById("mes");
+        var p1 = document.getElementById("pic");
+
+        var d = new Date();
+        var today = d.getDay();
+        //var today = ;
+        document.title = today;
+
+        if (today == 1) {
+            mes.innerHTML = "Image of Monday";
+            p1.src = "image/8.jpg";
+        }
+        if (today == 2) {
+            mes.innerHTML = "Image of Tuesday";
+            p1.src = "image/6.jpg";
+        }
+        if (today == 3) {
+            mes.innerHTML = "Image of Wednesday";
+            p1.src = "https://images.pexels.com/photos/38254347/pexels-photo-38254347.jpeg";
+        }
+        if (today == 4) {
+            mes.innerHTML = "Image of is Thursday";
+            p1.src = "image/10.jpg";
+        }
+        if (today == 5) {   
+            mes.innerHTML = "Today is Friday";
+            p1.src = "image/13.jpg";
+        }
+        if (today == 6) {
+            mes.innerHTML = "Image of Saturday";
+            p1.src = "image/11.jpg";
+        }
+        if (today == 7) {
+            mes.innerHTML = "Image of Sunday";
+            p1.src = "image/7.jpg";
+        }
+    </script>
+</body>
+</html>
