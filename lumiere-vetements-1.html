@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumière Vêtements | Premium Fashion Essentials</title>
+  <meta name="description" content="Shop curated luxury t-shirts, hoodies, joggers and shirts. Timeless elegance, modern craft, delivered worldwide." />
+  <meta property="og:title" content="Lumière Vêtements | Premium Fashion Essentials" />
+  <meta property="og:description" content="Shop curated luxury t-shirts, hoodies, joggers and shirts. Timeless elegance, modern craft." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --radius: .75rem;
+      --background: #151515;
+      --foreground: #f2efe9;
+      --card: #232323;
+      --primary: #c9a84c;
+      --primary-foreground: #151515;
+      --secondary: #2e2e2e;
+      --muted-foreground: #a8a49c;
+      --border: rgba(255, 255, 255, .12);
+      --shadow-soft: 0 10px 40px -15px rgba(0, 0, 0, .55);
+      --shadow-gold: 0 0 40px -10px rgba(201, 168, 76, .35);
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: "Karla", system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--foreground);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 600;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: 0;
+      background: none;
+      color: inherit;
+    }
+
+    /* Buttons */
+    .btn-gold,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      border-radius: var(--radius);
+      padding: .75rem 1.5rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      transition: transform .2s, box-shadow .2s, background-color .2s, color .2s, filter .2s;
+    }
+
+    .btn-gold {
+      background: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+      filter: brightness(1.05);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .sm {
+      padding: .5rem .75rem;
+      font-size: .875rem;
+      width: 100%;
+    }
+
+    /* Rotating logo */
+    @keyframes logo-3d-spin {
+      from { transform: perspective(800px) rotateY(0); }
+      to { transform: perspective(800px) rotateY(360deg); }
+    }
+
+    .logo-spin-3d {
+      animation: logo-3d-spin 8s linear infinite;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      filter: drop-shadow(0 0 18px rgba(201, 168, 76, .45));
+    }
+
+    .logo-lg { width: 96px; height: 96px; }
+    .logo-sm { width: 56px; height: 56px; }
+    .logo-spin-3d img { width: 100%; height: 100%; object-fit: contain; }
+
+    /* Header */
+    #site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--border);
+      background: rgba(21, 21, 21, .95);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      position: relative;
+      max-width: 1536px;
+      margin: 0 auto;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+
+    .nav-link {
+      font-size: .875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: rgba(242, 239, 233, .75);
+      position: relative;
+      transition: color .2s;
+    }
+
+    .nav-link:hover { color: var(--foreground); }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 1px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .3s;
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    #main-nav,
+    #secondary-nav {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .logo-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: rgba(242, 239, 233, .8);
+      transition: background-color .2s, color .2s;
+      position: relative;
+    }
+
+    .icon-btn:hover {
+      background: var(--secondary);
+      color: var(--foreground);
+    }
+
+    .icon-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .cart-count {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      font-size: .625rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #mobile-nav {
+      display: none;
+      border-top: 1px solid var(--border);
+      background: var(--background);
+      padding: 1.5rem;
+    }
+
+    #mobile-nav.open { display: block; }
+
+    #mobile-nav a {
+      display: block;
+      padding: .5rem 0;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-weight: 500;
+      color: rgba(242, 239, 233, .8);
+    }
+
+    #mobile-nav a:hover { color: var(--primary); }
+    #mobile-nav .nav-link::after { display: none; }
+
+    /* Hero */
+    #hero-section {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 7rem 0 5rem;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .4;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, var(--background), rgba(21, 21, 21, .6), var(--background));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .hero-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    #brand-banner {
+      margin: 1.5rem auto 0;
+      width: 260px;
+    }
+
+    .eyebrow {
+      margin-top: 2.5rem;
+      font-size: .8125rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .3em;
+      color: var(--primary);
+    }
+
+    h1 {
+      margin-top: 1rem;
+      font-size: 3rem;
+      line-height: 1.05;
+      letter-spacing: -.02em;
+    }
+
+    h1 span { color: var(--primary); }
+
+    .hero-sub {
+      margin: 1.5rem auto 0;
+      max-width: 36rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Products */
+    #product-grid-section {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
+
+    .section-head {
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .section-head .eyebrow { margin-top: 0; letter-spacing: .25em; }
+    .section-head h2 { margin-top: .5rem; font-size: 2.25rem; }
+
+    #product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--card);
+      border-radius: 1rem;
+      padding: .75rem;
+      box-shadow: var(--shadow-soft);
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .product-media {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      border-radius: .75rem;
+      overflow: hidden;
+      background: var(--secondary);
+    }
+
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .product-card:hover .product-media img { transform: scale(1.08); }
+
+    .badge {
+      position: absolute;
+      left: .75rem;
+      top: .75rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      padding: .25rem .75rem;
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .hover-actions {
+      display: none;
+      position: absolute;
+      inset: auto 0 0 0;
+      gap: .5rem;
+      padding: 1rem;
+      background: linear-gradient(to top, rgba(21, 21, 21, .92), transparent);
+      transform: translateY(100%);
+      transition: transform .3s;
+    }
+
+    .product-card:hover .hover-actions { transform: translateY(0); }
+
+    .product-info { margin-top: 1rem; padding: 0 .25rem .25rem; }
+
+    .product-cat {
+      font-size: .75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--muted-foreground);
+    }
+
+    .product-name {
+      margin-top: .25rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .product-meta {
+      margin-top: .5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .price-row { display: flex; align-items: baseline; gap: .5rem; }
+    .price { font-weight: 600; color: var(--primary); }
+
+    .old-price {
+      font-size: .75rem;
+      color: var(--muted-foreground);
+      text-decoration: line-through;
+    }
+
+    .rating { font-size: .75rem; color: var(--muted-foreground); }
+    .rating::first-letter { color: var(--primary); }
+
+    .mobile-actions { margin-top: 1rem; display: flex; gap: .5rem; }
+
+    /* Footer */
+    #contact {
+      border-top: 1px solid var(--border);
+      background: var(--card);
+      padding: 4rem 1.5rem;
+    }
+
+    .footer-inner { max-width: 1536px; margin: 0 auto; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .footer-about {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .footer-about p {
+      max-width: 20rem;
+      font-size: .875rem;
+      line-height: 1.7;
+      color: var(--muted-foreground);
+    }
+
+    .footer-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-inner h4 {
+      margin-bottom: 1rem;
+      font-family: var(--font-body);
+      font-size: .875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+    }
+
+    .footer-inner li { list-style: none; margin-bottom: .75rem; }
+
+    .footer-inner li a {
+      font-size: .875rem;
+      color: var(--muted-foreground);
+      transition: color .2s;
+    }
+
+    .footer-inner li a:hover { color: var(--primary); }
+
+    #newsletter-form { display: flex; gap: .5rem; }
+
+    #newsletter-form input {
+      flex: 1;
+      border-radius: .5rem;
+      border: 1px solid var(--border);
+      background: var(--background);
+      color: var(--foreground);
+      padding: .625rem 1rem;
+      font-size: .875rem;
+      outline: none;
+      font-family: inherit;
+    }
+
+    #newsletter-form input:focus { border-color: var(--primary); }
+
+    .footer-note {
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      font-size: .75rem;
+      color: var(--muted-foreground);
+    }
+
+    .footer-note a:hover { color: var(--primary); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .newsletter-copy { margin-bottom: 1rem; font-size: .875rem; color: var(--muted-foreground); }
+
+    @media (min-width: 640px) {
+      #product-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-cta { flex-direction: row; justify-content: center; }
+      #brand-banner { width: 320px; }
+      h1 { font-size: 4.25rem; }
+      .section-head { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+    }
+
+    @media (min-width: 1024px) {
+      .header-inner { height: 96px; padding: 0 3rem; }
+      #main-nav, #secondary-nav { display: flex; }
+      #secondary-nav { margin-right: 1rem; }
+      #menu-toggle { display: none; }
+      #product-grid { grid-template-columns: repeat(3, 1fr); }
+      #product-grid-section { padding: 7rem 3rem; }
+      h1 { font-size: 5.5rem; }
+      #brand-banner { width: 384px; }
+      .footer-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-note { flex-direction: row; justify-content: space-between; }
+      #contact { padding: 4rem 3rem; }
+      .hover-actions { display: flex; }
+      .mobile-actions { display: none; }
+    }
+
+    @media (min-width: 1280px) {
+      #product-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body id="top">
+
+  <header id="site-header">
+    <div class="header-inner">
+      <nav id="main-nav" aria-label="Main">
+        <a class="nav-link" href="#men">Men</a>
+        <a class="nav-link" href="#women">Women</a>
+        <a class="nav-link" href="#new-arrivals">New Arrivals</a>
+      </nav>
+
+      <button id="menu-toggle" class="icon-btn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+
+      <a class="logo-center" href="#top" aria-label="Lumière Vêtements home">
+        <div class="logo-spin-3d logo-sm">
+          <img src="https://placehold.co/240x240/0d0d0d/c9a84c.png?text=LOGO" alt="" />
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <nav id="secondary-nav" aria-label="Secondary">
+          <a class="nav-link" href="#collections">Collections</a>
+          <a class="nav-link" href="#sale">Sale</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <button class="icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7" /></svg>
+        </button>
+        <button class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <path d="M3 6h18" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+          <span class="cart-count" id="cart-count">2</span>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" aria-label="Mobile">
+      <a class="nav-link" href="#men">Men</a>
+      <a class="nav-link" href="#women">Women</a>
+      <a class="nav-link" href="#new-arrivals">New Arrivals</a>
+      <a class="nav-link" href="#collections">Collections</a>
+      <a class="nav-link" href="#sale">Sale</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero-section">
+      <div class="hero-bg">
+        <img
+          src="https://picsum.photos/seed/lumiere-hero-overcoat/1600/1200"
+          alt="Model wearing the Lumière Vêtements autumn overcoat"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-center">
+          <div class="logo-spin-3d logo-lg">
+            <img src="https://placehold.co/240x240/0d0d0d/c9a84c.png?text=LOGO" alt="" />
+          </div>
+        </div>
+        <img
+          id="brand-banner"
+          src="https://placehold.co/900x150/0d0d0d/c9a84c.png?text=LUMIERE+VETEMENTS"
+          alt="Lumière Vêtements"
+        />
+        <p class="eyebrow">Autumn / Winter 2026</p>
+        <h1>Quiet luxury, <span>worn daily</span></h1>
+        <p class="hero-sub">
+          Heavyweight tees, sculpted hoodies and tailored lowers — made in limited runs from fabrics chosen to
+          outlast the season.
+        </p>
+        <div class="hero-cta">
+          <a class="btn-gold" href="#product-grid-section">Shop the collection →</a>
+          <a class="btn-outline" href="#new-arrivals">New arrivals</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="product-grid-section">
+      <div class="section-head" id="new-arrivals">
+        <div>
+          <p class="eyebrow">New arrivals</p>
+          <h2>The season's essentials</h2>
+        </div>
+        <a class="nav-link" href="#collections">Shop all</a>
+      </div>
+
+      <div id="product-grid">
+        <article class="product-card">
+          <div class="product-media">
+            <img
+              src="https://picsum.photos/seed/essential-heavyweight-tee/800/1067"
+              alt="Essential Heavyweight Tee"
+              loading="lazy"
+            />
+            <span class="badge">-24%</span>
+            <div class="hover-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">T-Shirts</p>
+            <h3 class="product-name">Essential Heavyweight Tee</h3>
+            <div class="product-meta">
+              <p class="price-row"><span class="price">$68</span><span class="old-price">$89</span></p>
+              <p class="rating">★ 4.8 (214)</p>
+            </div>
+            <div class="mobile-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img
+              src="https://picsum.photos/seed/noir-oversized-hoodie/800/1067"
+              alt="Noir Oversized Hoodie"
+              loading="lazy"
+            />
+            <div class="hover-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Hoodies</p>
+            <h3 class="product-name">Noir Oversized Hoodie</h3>
+            <div class="product-meta">
+              <p class="price-row"><span class="price">$148</span></p>
+              <p class="rating">★ 4.9 (302)</p>
+            </div>
+            <div class="mobile-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img
+              src="https://picsum.photos/seed/tapered-cotton-joggers/800/1067"
+              alt="Tapered Cotton Joggers"
+              loading="lazy"
+            />
+            <span class="badge">-20%</span>
+            <div class="hover-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Joggers</p>
+            <h3 class="product-name">Tapered Cotton Joggers</h3>
+            <div class="product-meta">
+              <p class="price-row"><span class="price">$112</span><span class="old-price">$140</span></p>
+              <p class="rating">★ 4.7 (168)</p>
+            </div>
+            <div class="mobile-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img
+              src="https://picsum.photos/seed/ivory-silk-shirt/800/1067"
+              alt="Ivory Silk Shirt"
+              loading="lazy"
+            />
+            <div class="hover-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Shirts</p>
+            <h3 class="product-name">Ivory Silk Shirt</h3>
+            <div class="product-meta">
+              <p class="price-row"><span class="price">$195</span></p>
+              <p class="rating">★ 4.9 (96)</p>
+            </div>
+            <div class="mobile-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img
+              src="https://picsum.photos/seed/charcoal-knit-lowers/800/1067"
+              alt="Charcoal Knit Lowers"
+              loading="lazy"
+            />
+            <span class="badge">-23%</span>
+            <div class="hover-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Lowers</p>
+            <h3 class="product-name">Charcoal Knit Lowers</h3>
+            <div class="product-meta">
+              <p class="price-row"><span class="price">$96</span><span class="old-price">$125</span></p>
+              <p class="rating">★ 4.6 (141)</p>
+            </div>
+            <div class="mobile-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img
+              src="https://picsum.photos/seed/camel-wool-overcoat/800/1067"
+              alt="Camel Wool Overcoat"
+              loading="lazy"
+            />
+            <div class="hover-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Outerwear</p>
+            <h3 class="product-name">Camel Wool Overcoat</h3>
+            <div class="product-meta">
+              <p class="price-row"><span class="price">$420</span></p>
+              <p class="rating">★ 5.0 (58)</p>
+            </div>
+            <div class="mobile-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img
+              src="https://picsum.photos/seed/ribbed-merino-sweater/800/1067"
+              alt="Ribbed Merino Sweater"
+              loading="lazy"
+            />
+            <span class="badge">-20%</span>
+            <div class="hover-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Knitwear</p>
+            <h3 class="product-name">Ribbed Merino Sweater</h3>
+            <div class="product-meta">
+              <p class="price-row"><span class="price">$168</span><span class="old-price">$210</span></p>
+              <p class="rating">★ 4.8 (187)</p>
+            </div>
+            <div class="mobile-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img
+              src="https://picsum.photos/seed/studio-relaxed-tee/800/1067"
+              alt="Studio Relaxed Tee"
+              loading="lazy"
+            />
+            <div class="hover-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">T-Shirts</p>
+            <h3 class="product-name">Studio Relaxed Tee</h3>
+            <div class="product-meta">
+              <p class="price-row"><span class="price">$72</span></p>
+              <p class="rating">★ 4.5 (122)</p>
+            </div>
+            <div class="mobile-actions">
+              <button class="btn-gold sm">Buy Now</button>
+              <button class="btn-outline sm">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo-spin-3d logo-sm">
+            <img src="https://placehold.co/240x240/0d0d0d/c9a84c.png?text=LOGO" alt="" />
+          </div>
+          <p>
+            Lumière Vêtements is a small atelier making considered wardrobe staples in limited runs — cut, sewn
+            and finished with care.
+          </p>
+        </div>
+
+        <div class="footer-cols">
+          <div>
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#product-grid-section">Men</a></li>
+              <li><a href="#product-grid-section">Women</a></li>
+              <li><a href="#product-grid-section">New Arrivals</a></li>
+              <li><a href="#product-grid-section">Sale</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Help</h4>
+            <ul>
+              <li><a href="#contact">Shipping</a></li>
+              <li><a href="#contact">Returns</a></li>
+              <li><a href="#contact">Size Guide</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h4>Private list</h4>
+          <p class="newsletter-copy">Early access to drops and archive releases.</p>
+          <form id="newsletter-form">
+            <input type="email" required placeholder="Email address" aria-label="Email address" />
+            <button class="btn-gold" type="submit" style="padding:.625rem 1.25rem;font-size:.875rem">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        <p>&copy; 2026 Lumière Vêtements. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#contact">Privacy</a>
+          <a href="#contact">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('menu-toggle');
+      var mobileNav = document.getElementById('mobile-nav');
+
+      toggle.addEventListener('click', function () {
+        var open = mobileNav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+
+      mobileNav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          mobileNav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      var count = 2;
+      document.querySelectorAll('.btn-outline.sm').forEach(function (b) {
+        b.addEventListener('click', function () {
+          count++;
+          document.getElementById('cart-count').textContent = count;
+        });
+      });
+
+      document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        e.target.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
