@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena Animation GTB Nagar — Animation, VFX & Design Courses in Delhi</title>
+    <meta
+      name="description"
+      content="Arena Animation GTB Nagar, Delhi. Industry-led programs in animation, VFX, graphic design, UI/UX and game art with portfolio mentoring and placement support."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+  
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        background: #ffffff;
+        color: #1c2529;
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      section {
+        padding: 88px 6vw;
+      }
+
+   
+      .heading-display {
+        font-family: "Anton", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+      }
+
+  
+
+      .site-top,
+      .contact-section,
+      .site-footer {
+        background: #10161c;
+        color: #ffffff;
+      }
+
+     
+      .outcomes-section,
+      .add-course-section {
+        background: #f6f7f5;
+        color: #1c2529;
+      }
+
+    
+      .programs-section,
+      .recruiters-section {
+        background: #ffffff;
+        color: #1c2529;
+      }
+
+   
+      .outcomes-section,
+      .add-course-section,
+      .site-footer {
+        border-top: 1px solid #e3e5e0;
+      }
+
+      .outcomes-section {
+        border-bottom: 1px solid #e3e5e0;
+      }
+
+      .site-footer {
+        border-top: 1px solid #2a3a42;
+      }
+
+     
+      .site-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 6vw 16px;
+      }
+
+      .site-logo {
+        height: 70px;
+        width: auto;
+      }
+
+      .navigation-links {
+        display: flex;
+        gap: 32px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .navigation-links li {
+        position: relative;
+      }
+
+      .navigation-links a {
+        color: #a9b6bd;
+        padding-bottom: 4px;
+        transition: color 0.2s ease;
+      }
+
+      .navigation-links a:hover,
+      .navigation-links a.active {
+        color: #e9e6e6;
+      }
+
+     
+      .nav-dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 210px;
+        margin-top: 12px;
+        padding: 10px 0;
+        background: #ffffff;
+        border: 1px solid #e3e5e0;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(16, 22, 28, 0.12);
+        text-transform: none;
+        letter-spacing: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease;
+        z-index: 20;
+      }
+
+      .nav-dropdown:hover 
+      .nav-dropdown-menu,
+      .nav-dropdown:focus-within 
+      .nav-dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-dropdown-menu a {
+        display: block;
+        padding: 9px 18px;
+        font-size: 13px;
+        color: #1c2529;
+        transition:opacity 0.1s ease;
+      }
+
+      .nav-dropdown-menu a:hover {
+        background: #f6f7f5;
+        color: #2f7d6b;
+      }
+
+      .phone-call-button {
+        border: 1px solid #2a3a42;
+        color: #ffffff;
+        padding: 10px 20px;
+        font-size: 13px;
+        border-radius: 10px;
+        transition: border-color 0.2s ease;
+      }
+
+      .phone-call-button:hover {
+        border-color: #2f7d6b;
+        color: #7fd4c1;
+      }
+
+      
+      .button-solid {
+        display: inline-block;
+        background: #2f7d6b;
+        color: #ffffff;
+        border: 1px solid #2f7d6b;
+        padding: 14px 26px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      .button-solid:hover {
+        background: #26685a;
+      }
+
+      .button-ghost {
+        display: inline-block;
+        border: 1px solid #2a3a42;
+        color: #ffffff;
+        padding: 14px 24px;
+        font-size: 14px;
+        border-radius: 10px;
+        transition: border-color 0.2s ease;
+      }
+
+      .button-ghost:hover {
+        border-color: #2f7d6b;
+        color: #7fd4c1;
+      }
+
+
+      .hero-section {
+        padding: 64px 6vw 80px;
+      }
+
+      .hero-layout-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 60px;
+        align-items: end;
+      }
+
+      .primary-headline {
+        font-size: 64px;
+        line-height: 1;
+        color: #ffffff;
+      }
+
+      .primary-headline .accent-text {
+        color: #7fd4c1;
+      }
+
+      .hero-subtitle {
+        margin-top: 22px;
+        max-width: 500px;
+        font-size: 16px;
+        color: #a9b6bd;
+      }
+
+      .hero-statistics-line {
+        margin-top: 10px;
+        font-size: 15px;
+        color: #ffffff;
+      }
+
+      .hero-statistics-line b {
+        color: #7fd4c1;
+        font-weight: 600;
+      }
+
+      .hero-call-to-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+     
+      .enquiry-form-card {
+        background: #17232a;
+        border: 1px solid #2a3a42;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .enquiry-form-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 22px;
+        border-bottom: 1px solid #2a3a42;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #a9b6bd;
+      }
+
+      .form-note {
+        color: #7fd4c1;
+      }
+
+      .enquiry-form-card form {
+        padding: 22px;
+      }
+
+      .enquiry-form-card label {
+        display: block;
+        margin: 16px 0 6px;
+        font-size: 11px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #a9b6bd;
+      }
+
+      .enquiry-form-card input,
+      .enquiry-form-card select {
+        width: 100%;
+        padding: 12px;
+        background: #10161c;
+        border: 1px solid #2a3a42;
+        border-radius: 10px;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 14px;
+      }
+
+      .enquiry-form-card input:focus,
+      .enquiry-form-card select:focus {
+        outline: none;
+        border-color: #2f7d6b;
+      }
+
+      .enquiry-form-card input::placeholder {
+        color: #5d6b74;
+      }
+
+      .enquiry-form-card button {
+        width: 100%;
+        margin-top: 22px;
+        padding: 14px;
+        background: #2f7d6b;
+        border: none;
+        border-radius: 10px;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      .enquiry-form-card button:hover {
+        background: #26685a;
+      }
+
+      
+      .section-header {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin: 44px auto;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e3e5e0;
+      }
+
+      .section-heading {
+        font-size: 36px;
+        line-height: 1.15;
+      }
+
+      
+      .program-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .program-card {
+        position: relative;
+        min-height: 320px;
+        border: 1px solid #e3e5e0;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #10161c;
+      }
+
+      .program-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.55;
+        transition: opacity 0.3s ease;
+      }
+
+      .program-card:hover .program-image {
+        opacity: 0.9;
+      }
+
+      .program-copy {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 22px 20px;
+      }
+
+      .program-card h3 {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 1.05;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+        text-shadow: 0 2px 12px rgba(16, 22, 28, 0.6);
+      }
+
+      .program-desc {
+        margin-top: 8px;
+        font-size: 13px;
+        color: #e8eef0;
+      }
+
+     
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .stat-item {
+        padding: 22px 24px;
+        background: #eef5f2;
+        border-radius: 10px;
+      }
+
+      .stat-value {
+        font-family: "Anton", sans-serif;
+        font-size: 38px;
+        line-height: 1;
+        color: #2f7d6b;
+      }
+
+      .stat-label {
+        margin-top: 8px;
+        font-size: 13px;
+        color: #6b7780;
+      }
+
+     
+      .recruiter-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 36px 24px;
+        height: 50%;
+      }
+
+      .recruiter-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .recruiter-logo {
+        width: 110px;
+        height: 70px;
+        object-fit: contain;
+      }
+
+      .recruiter-name {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #6b7780;
+      }
+
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 48px;
+      }
+
+      .contact-map {
+        border: 1px solid #2a3a42;
+        border-radius: 10px;
+        overflow: hidden;
+        min-height: 340px;
+      }
+
+      .contact-map iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 340px;
+        border: 0;
+      }
+
+      .contact-information {
+        display: grid;
+        align-content: center;
+        gap: 24px;
+      }
+
+      .contact-information h2 {
+        font-size: 36px;
+        line-height: 1.15;
+      }
+
+      .contact-information p {
+        margin-top: 14px;
+        max-width: 460px;
+        color: #a9b6bd;
+      }
+
+      .contact-details {
+        display: grid;
+        gap: 14px;
+        font-size: 14px;
+        color: #a9b6bd;
+      }
+
+      .contact-details strong {
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      
+      .add-course-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        padding: 48px;
+        background: #eef5f2;
+        border: 1px solid #e3e5e0;
+        border-radius: 20px;
+      }
+
+      .add-course-card h2 {
+        font-size: 34px;
+        line-height: 1.15;
+      }
+
+      .add-course-card p {
+        margin-top: 14px;
+        max-width: 460px;
+        font-size: 15px;
+        color: #6b7780;
+      }
+
+      .add-course-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .add-course-form input,
+      .add-course-form select {
+        width: 100%;
+        padding: 13px;
+        background: #ffffff;
+        border: 1px solid #e3e5e0;
+        border-radius: 10px;
+        color: #1c2529;
+        font-family: inherit;
+        font-size: 14px;
+      }
+
+      .add-course-form input:focus,
+      .add-course-form select:focus {
+        outline: none;
+        border-color: #2f7d6b;
+      }
+
+      .add-course-form .full-width {
+        grid-column: 1 / 3;
+      }
+
+      .add-course-form button {
+        grid-column: 1 / 3;
+        padding: 15px;
+        background: #2f7d6b;
+        border: none;
+        border-radius: 10px;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: opacity 0.5s ease;
+      }
+
+      .add-course-form button:hover {
+        background: #26685a;
+      }
+
+      
+      .footer-top {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        gap: 40px;
+        padding: 64px 6vw 48px;
+      }
+
+      .footer-logo {
+        height: 55px;
+        width: auto;
+        margin-bottom: 18px;
+      }
+
+      .footer-brand p {
+        max-width: 300px;
+        font-size: 14px;
+        color: #a9b6bd;
+      }
+
+      .footer-socials {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .footer-socials a {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #2a3a42;
+        border-radius: 50%;
+        font-size: 12px;
+        color: #a9b6bd;
+        transition: border-color 0.2s ease;
+      }
+
+      .footer-socials a:hover {
+        border-color: #2f7d6b;
+        color: #7fd4c1;
+      }
+
+      .footer-column h4 {
+        margin-bottom: 18px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+
+      .footer-column ul {
+        display: grid;
+        gap: 11px;
+        font-size: 14px;
+        color: #a9b6bd;
+      }
+
+      .footer-column a:hover {
+        color: #7fd4c1;
+      }
+
+      .footer-newsletter form {
+        display: flex;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .footer-newsletter input {
+        flex: 1;
+        min-width: 0;
+        padding: 12px;
+        background: #17232a;
+        border: 1px solid #2a3a42;
+        border-radius: 10px;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 14px;
+      }
+
+      .footer-newsletter input:focus {
+        outline: none;
+        border-color: #2f7d6b;
+      }
+
+      .footer-newsletter button {
+        padding: 0 18px;
+        background: #2f7d6b;
+        border: none;
+        border-radius: 10px;
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      
+      .footer-newsletter button:hover {
+        background: #26685a;
+      }
+
+
+    
+      @media (max-width: 900px) {
+        section {
+          padding: 64px 6vw;
+        }
+
+        .navigation-links {
+          display: none;
+        }
+
+        .primary-headline {
+          font-size: 44px;
+        }
+
+        .hero-layout-grid,
+        .contact-layout,
+        .add-course-card {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+
+        .add-course-card {
+          padding: 32px;
+        }
+
+        .program-grid,
+        .stat-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .recruiter-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .program-grid,
+        .stat-grid,
+        .add-course-form,
+        .footer-top {
+          grid-template-columns: 1fr;
+        }
+
+        .add-course-form .full-width,
+        .add-course-form button {
+          grid-column: 1 / 2;
+        }
+
+        .recruiter-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header class="site-top">
+      <nav class="site-nav">
+        <img class="site-logo" src="images/arena-animation.webp" alt="Arena Animation logo" />
+
+        <ul class="navigation-links">
+          <li class="nav-dropdown">
+            <a href="#programs" class="active">Courses</a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="#programs">Arena Animation</a></li>
+              <li><a href="#programs">Graphic Designing</a></li>
+              <li><a href="#programs">UI / UX Design</a></li>
+              <li><a href="#programs">Web Designing</a></li>
+            </ul>
+          </li>
+          <li><a href="#outcomes">Outcomes</a></li>
+          <li><a href="#recruiters">Recruiters</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a class="phone-call-button" href="tel:+910000000000">+91 00 0000 0000</a>
+      </nav>
+
+      <section class="hero-section">
+        <div class="hero-layout-grid">
+          <div class="hero-intro">
+            <h1 class="primary-headline heading-display">
+              Build a career in
+              <span class="accent-text">animation, VFX &amp; design.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Industry-designed programs taught by working professionals, with portfolio
+              mentoring and placement support from our GTB Nagar campus.
+            </p>
+
+            <p class="hero-statistics-line">
+              <b>30+ years</b> of training experience · <b>1,500+</b> students placed from
+              this centre
+            </p>
+
+            <div class="hero-call-to-actions">
+              <a class="button-solid" href="tel:+910000000000">Call the centre</a>
+              <a class="button-ghost" href="#enquiry">Apply now</a>
+            </div>
+          </div>
+
+          <div class="enquiry-form-card" id="enquiry">
+            <div class="enquiry-form-header">
+              <span>Enquiry form</span>
+              <span class="form-note">Response in 24h</span>
+            </div>
+
+            <form>
+              <label for="enquiry-name">Full name</label>
+              <input id="enquiry-name" type="text" placeholder="Your name" required />
+
+              <label for="enquiry-phone">Phone number</label>
+              <input id="enquiry-phone" type="tel" placeholder="10-digit mobile" required />
+
+              <label for="enquiry-program">Program of interest</label>
+              <select id="enquiry-program">
+                <option>Animation &amp; VFX</option>
+                <option>Graphic Design</option>
+                <option>UI/UX Design</option>
+                <option>Game Art &amp; Design</option>
+                <option>Digital Marketing</option>
+              </select>
+
+              <button type="submit">Request a callback</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+     
+      <section class="programs-section" id="programs">
+        <div class="section-header">
+          <h2 class="section-heading heading-display">Courses built around this institute</h2>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card">
+            <img class="program-image" src="images/animation.jpg" alt="Animation and VFX course" />
+            <div class="program-copy">
+              <h3>Animation &amp; VFX</h3>
+              <p class="program-desc">3D animation, compositing and visual effects.</p>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <img class="program-image" src="images/graphic.jpg" alt="Graphic designing course" />
+            <div class="program-copy">
+              <h3>Graphic Designing</h3>
+              <p class="program-desc">Branding, print and social media design.</p>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <img class="program-image" src="images/uiux.jpg" alt="UI and UX design course" />
+            <div class="program-copy">
+              <h3>UI / UX Design</h3>
+              <p class="program-desc">Wireframes, prototypes and product design.</p>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <img class="program-image" src="images/web.jpg" alt="Web designing course" />
+            <div class="program-copy">
+              <h3>Web Designing</h3>
+              <p class="program-desc">HTML, CSS and responsive website building.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+     
+      <section class="outcomes-section" id="outcomes">
+        <div class="section-header">
+          <h2 class="section-heading heading-display">What students take away</h2>
+         </div>
+
+        <div class="stat-grid">
+          <div class="stat-item">
+            <div class="stat-value">1,200+</div>
+            <p class="stat-label">Students placed</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">180+</div>
+            <p class="stat-label">Hiring partners</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">92%</div>
+            <p class="stat-label">Placement assistance rate</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">30</div>
+            <p class="stat-label">Years of training</p>
+          </div>
+        </div>
+      </section>
+
+     
+      <section class="recruiters-section" id="recruiters">
+        <div class="section-header">
+          <h2 class="section-heading heading-display">Hiring for placements</h2>
+        </div>
+
+        <div class="recruiter-grid">
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/time.png" alt="Times Network logo" />
+            <span class="recruiter-name">Times Network</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/zara.png" alt="Zara logo" />
+            <span class="recruiter-name">Zara</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/dlf.png" alt="DLF logo" />
+            <span class="recruiter-name">DLF</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/star.png" alt="Starbucks logo" />
+            <span class="recruiter-name">Starbucks</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/india.png" alt="India TV logo" />
+            <span class="recruiter-name">India TV</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/star.png" alt="Partner studio logo" />
+            <span class="recruiter-name">Studio Partner</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/time.png" alt="Times Network logo" />
+            <span class="recruiter-name">Times Network</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/zara.png" alt="Zara logo" />
+            <span class="recruiter-name">Zara</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/dlf.png" alt="DLF logo" />
+            <span class="recruiter-name">DLF</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/star.png" alt="Starbucks logo" />
+            <span class="recruiter-name">Starbucks</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/india.png" alt="India TV logo" />
+            <span class="recruiter-name">India TV</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/star.png" alt="Partner studio logo" />
+            <span class="recruiter-name">Studio Partner</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/time.png" alt="Times Network logo" />
+            <span class="recruiter-name">Times Network</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/zara.png" alt="Zara logo" />
+            <span class="recruiter-name">Zara</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/dlf.png" alt="DLF logo" />
+            <span class="recruiter-name">DLF</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/star.png" alt="Starbucks logo" />
+            <span class="recruiter-name">Starbucks</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/india.png" alt="India TV logo" />
+            <span class="recruiter-name">India TV</span>
+          </div>
+          <div class="recruiter-item">
+            <img class="recruiter-logo" src="images/star.png" alt="Partner studio logo" />
+            <span class="recruiter-name">Studio Partner</span>
+          </div>
+        </div>
+        
+      </section>
+
+     
+      <section class="contact-section" id="contact">
+        <div class="contact-layout">
+          <div class="contact-map">
+            <iframe
+              title="Arena Animation GTB Nagar location map"
+              src="https://www.google.com/maps?q=GTB%20Nagar%2C%20Delhi&output=embed"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <div class="contact-information">
+            <div>
+              <h2 class="heading-display">Visit the GTB Nagar centre</h2>
+              <p>
+                Walk in for a campus tour, meet the faculty and see student work before you
+                decide.
+              </p>
+            </div>
+
+            <div class="contact-details">
+              <div>
+                <strong>Address</strong>
+                2nd Floor, Ring Road, GTB Nagar, Delhi 110009
+              </div>
+              <div>
+                <strong>Phone</strong>
+                +91 00 0000 0000
+              </div>
+              <div>
+                <strong>Email</strong>
+                info@example.com
+              </div>
+              <div>
+                <strong>Hours</strong>
+                Monday to Saturday, 10:00 – 19:00
+              </div>
+            </div>
+
+            <div class="hero-call-to-actions">
+              <a class="button-solid" href="#enquiry">Book a counselling slot</a>
+              <a class="button-ghost" href="tel:+910000000000">Call now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+      <section class="add-course-section" id="add-course">
+        <div class="add-course-card">
+          <div>
+            <h2 class="heading-display">Add your course</h2>
+            <p>
+              Are you a trainer, studio or institute? Submit your program and we will review
+              it for listing on the GTB Nagar course catalogue.
+            </p>
+          </div>
+
+          <form class="add-course-form">
+            <input type="text" placeholder="Course name" aria-label="Course name" required />
+            <input type="text" placeholder="Your name" aria-label="Your name" required />
+            <input type="email" placeholder="Email address" aria-label="Email address" required />
+            <input type="tel" placeholder="Phone number" aria-label="Phone number" />
+            <select class="full-width" aria-label="Category">
+              <option>Animation &amp; VFX</option>
+              <option>Graphic Design</option>
+              <option>UI/UX Design</option>
+              <option>Game Art &amp; Design</option>
+              <option>Digital Marketing</option>
+            </select>
+            <button type="submit">Submit course</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+   
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/arena-animation.webp" alt="Arena Animation logo" />
+          <p>
+            Industry-led animation, VFX and design training from our GTB Nagar campus, with
+            portfolio mentoring and placement support.
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="YouTube">YT</a>
+            <a href="#" aria-label="LinkedIn">IN</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="#programs">Animation &amp; VFX</a></li>
+            <li><a href="#programs">Graphic Designing</a></li>
+            <li><a href="#programs">UI / UX Design</a></li>
+            <li><a href="#programs">Web Designing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#outcomes">Outcomes</a></li>
+            <li><a href="#recruiters">Placements</a></li>
+            <li><a href="#add-course">Add your course</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-newsletter">
+          <h4>Stay updated</h4>
+          <ul>
+            <li>2nd Floor, Ring Road, GTB Nagar, Delhi 110009</li>
+            <li>+91 00 0000 0000</li>
+          </ul>
+          <form>
+            <input type="email" placeholder="Email address" aria-label="Email address" />
+            <button type="submit">Join</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
