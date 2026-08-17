@@ -14,7 +14,7 @@
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="page.html">Practice Work</a></li>
-        <li><a href="arena-animation-redesign.1(1)">projects </a></li>
+        <li><a href="arena-animation-redesign.1(1)">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -26,12 +26,12 @@
         <div class="hero-text">
           <h1>I Am Kapil UI/UX Designer</h1>
           <p>
-            This is my simple website: a personal portfolio I created to showcase who I am, my
+            This is my simple website: <br> a personal portfolio I created to showcase who I am, my
             skills, and my best work. It is clean, simple, and easy to navigate.
           </p>
         </div>
         <div class="hero-avatar">
-          <div class="avatar">  <img src="image/me.1.jpeg" alt="Kapil Mehra" /></div>
+          <div class="avatar"><img src="image/me.1.jpeg" alt="Kapil Mehra" /></div>
         </div>
       </div>
     </section>
@@ -50,7 +50,6 @@
             </div>
             <div class="work-body">
               <h3>Practice Work</h3>
-            
             </div>
           </a>
         </article>
@@ -60,36 +59,32 @@
             <div class="work-image">
               <img
                 src="image/webside.jpg"
-                alt="Practice work project preview"
+                alt="Projects preview"
                 loading="lazy"
               />
             </div>
             <div class="work-body">
-              <h3>Projects </h3>
-             
+              <h3>Projects</h3>
             </div>
           </a>
         </article>
       </div>
     </section>
+  </main>
 
-
-
-  <script>
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 200) {
-        scrollTopBtn.style.display = 'flex';
-      } else {
-        scrollTopBtn.style.display = 'none';
-      }
-    });
-
-    scrollTopBtn.style.display = 'none';
-  </script>
-</body>
-
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="mailto:exyzkapil5@gmail.com" target="_blank" rel="noopener noreferrer">
+        <img src="image/email-icon.png" alt="Email" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;" /> Email
+      </a>
+      <a href="https://www.linkedin.com/in/kapil-mehra-36bb35414/" target="_blank" rel="noopener noreferrer">
+        <img src="image/linkedin-icon.png" alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;" /> LinkedIn
+      </a>
+      <a href="https://www.behance.net/kapilmehra5" target="_blank" rel="noopener noreferrer">
+        <img src="image/behance-icon.png" alt="Behance" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;" /> Behance
+      </a>
+    </div>
+  </footer>
 
   <button
     id="scrollTopBtn"
@@ -99,13 +94,18 @@
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
     ☝️
   </button>    
-   <footer class="footer">
-    <div class="footer-links">
-      <a href="mailto:exyzkapil5@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/kapil-mehra-36bb35414/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://www.behance.net/kapilmehra5" target="_blank" rel="noopener noreferrer">Behance</a>
-    </div>
-  </footer>
+
+  <script>
+    (function () {
+      const scrollTopBtn = document.getElementById('scrollTopBtn');
+      const toggle = function () {
+        scrollTopBtn.classList.toggle('is-visible', window.scrollY > 300);
+      };
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+    })();
+  </script>
 
 
+</body>
 </html>
