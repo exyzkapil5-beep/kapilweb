@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Banner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #8e8ed6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        header {
+            position: relative;
+            width: 60%;
+            max-width: 800px;
+            height: 350px;
+            margin: 0 auto;
+        }
+
+        .pic {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+            transition: opacity 1s ease-in-out;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body onLoad="anibanner()">
+
+    <h1>Different 5 Animation Images</h1>
+
+    <header>
+        <img class="pic" src="images/p1.jpg" id="p1" alt="Image 1">
+        <img class="pic" src="images/p2.jpg" id="p2" alt="Image 2">
+        <img class="pic" src="images/p3.jpg" id="p3" alt="Image 3">
+        <img class="pic" src="images/p4.jpg" id="p4" alt="Image 4">
+        <img class="pic" src="images/p5.jpg" id="p5" alt="Image 5">
+    </header>
+
+    <script>
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var p4 = document.getElementById("p4");
+        var p5 = document.getElementById("p5");
+        var c = 0;
+
+        function anibanner() {
+            switch(c) {
+                case 1:
+                  
+                    p5.classList.add("animate__animated", "animate__flip");
+                    p5.style.opacity = "0";
+                    break;
+                case 2:
+                  
+                    p4.classList.add("animate__animated", "animate__bounceOut");
+                    p4.style.opacity = "0";
+                    break;
+                case 3:
+                  
+                    p3.classList.add("animate__animated", "animate__fadeOutLeft");
+                    p3.style.opacity = "0";
+                    break;
+                case 4:
+                   
+                    p2.classList.add("animate__animated", "animate__rotateOut");
+                    p2.style.opacity = "0";
+                    break;
+                case 5:
+                   
+                    p1.classList.add("animate__animated", "animate__zoomOut");
+                    p1.style.opacity = "0";
+                    break;
+                case 6:
+                   
+                    p5.style.opacity = "1";
+                    p4.style.opacity = "1";
+                    p3.style.opacity = "1";
+                    p2.style.opacity = "1";
+                    p1.style.opacity = "1";
+
+                   
+                    p5.classList.remove("animate__animated", "animate__flip");
+                    p4.classList.remove("animate__animated", "animate__bounceOut");
+                    p3.classList.remove("animate__animated", "animate__fadeOutLeft");
+                    p2.classList.remove("animate__animated", "animate__rotateOut");
+                    p1.classList.remove("animate__animated", "animate__zoomOut");
+                    break;
+            }
+
+          
+            if (c <= 5) {
+                c++;
+            } else {
+                c = 1;
+            }
+
+            document.title = "Step " + c;
+            
+          
+            setTimeout(anibanner, 4000);
+        }
+    </script>
+</body>
+</html>
