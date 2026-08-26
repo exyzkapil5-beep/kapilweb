@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bird {
+            width: 200px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transition: transform 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Keyboard Event in js</h1>
+    
+
+    <img id="bird" src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=600/uploads/users/1112/posts/25209/final_image/animate-bird-slide-25.gif" alt="Bird Image"alt="Bird Image">
+
+    <script>
+        var bird = document.getElementById("bird")
+        var L = 0
+        var T = 0
+
+        function f1(e) {
+            var a = e.key
+            
+            switch(a) {
+                case "ArrowRight":
+                    if (L < window.innerWidth - 200) {
+                        L = L + 10
+                    } else {
+                        L = 0
+                    }
+                    bird.style.transform = "rotateY(0deg)"
+                    break
+
+                case "ArrowLeft":
+                    if (L > 0) {
+                        L = L - 10
+                    } else {
+                        L = window.innerWidth - 200
+                    }
+                    bird.style.transform = "rotateY(180deg)"
+                    break
+
+                case "ArrowDown":
+                    if (T < window.innerHeight - 200) {
+                        T = T + 10
+                    } else {
+                        T = 0
+                    }
+                    bird.style.transform = "rotateX(0deg)"
+                    break
+
+                case "ArrowUp":
+                    if (T > 0) {
+                        T = T - 10
+                    } else {
+                        T = window.innerHeight - 200
+                    }
+                    bird.style.transform = "rotateX(0deg)"
+                    break
+            }
+
+           
+            bird.style.left = L + "px"
+            bird.style.top = T + "px"
+        }
+
+        window.addEventListener("keydown", f1)
+    </script>
+
+</body>
+</html>
+   
+                
