@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Animate.css library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: black;
+        text-align: center;
+      }
+
+      .pic {
+        width: 20%;
+        box-shadow: 5px 5px 40px rgb(47, 221, 241);
+        transition: 0.5s;
+        cursor: pointer;
+        margin: 10%;
+      }
+
+     
+      .pic:hover {
+        animation: pulse;
+        animation-duration: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      for (var i = 51;i<=61;i++) {
+        var p = document.createElement("img");
+        document.body.appendChild(p);
+        p.src = "image/"+i+".jpg";
+
+        p.className = "pic";
+      }
+    </script>
+  </body>
+</html>
