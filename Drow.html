@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>draw.html</title>
+</head>
+<body>
+
+  
+  <canvas id="mycan" width="500" height="500" style="border:1px black solid"></canvas>
+
+  <script>
+    var my = document.getElementById("mycan");
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+
+    my.width = w;
+    my.height = h;
+
+    var c = my.getContext("2d");
+
+   
+    c.fillStyle = "brown";
+   
+    c.fillRect(190, 200, 20, 100); 
+
+    c.fillStyle = "green";
+
+  
+    c.beginPath();
+    c.arc(200, 150, 45, 0, 2 * Math.PI);
+    c.fill();
+
+
+    c.beginPath();
+    c.arc(175, 175, 35, 0, 2 * Math.PI);
+    c.fill();
+
+  
+    c.beginPath();
+    c.arc(225, 175, 35, 0, 2 * Math.PI);
+    c.fill();
+
+  </script>
+</body>
+</html>
