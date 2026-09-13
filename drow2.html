@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing App</title>
+
+</head>
+<body>
+
+   
+    <input type="color" id="color" value="#FFFFF6">
+    <canvas id="mycan"></canvas>
+
+    <script>
+    var mycan = document.getElementById("mycan")
+    var colorPicker = document.getElementById("colorPicker")
+
+    var w = window.innerWidth
+    var h = window.innerHeight
+    var s = 10
+    var x = 30
+    var y = 30
+    var drawmode = false
+
+    mycan.width = w
+    mycan.height = h
+
+    var c = mycan.getContext("2d");
+    
+   
+    c.fillStyle = color.value;
+
+  
+    color.addEventListener("input", function(e) {
+        c.fillStyle = e.target.value;
+    });
+
+    function draw(e)
+    {
+        x = e.clientX
+        y = e.clientY
+
+        if(drawmode)
+        {
+            c.beginPath();
+            c.arc(x, y, s, 0, 2 * Math.PI);
+            c.fill();
+        }
+    }
+
+    function setdrawmode()
+    {
+        drawmode = !drawmode;
+        document.title = "Drawing: " + drawmode;
+    }
+
+    function f1(e)
+    {
+        if((e.key == "+") && (s < 50))
+        {
+            s += 2
+        }
+        if((e.key == "-") && (s > 5))
+        {
+            s -= 2
+        }
+        if(e.key == " ")
+        {
+            c.clearRect(0, 0, w, h)
+        }
+
+        document.title = "Size: " + s
+    }
+
+    mycan.addEventListener("mousemove", draw)
+    mycan.addEventListener("mousedown", setdrawmode)
+    document.addEventListener("keydown", f1)
+
+    </script>
+</body>
+</html>
