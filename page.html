@@ -12,51 +12,59 @@
       padding: 0;
       font-family: Arial, sans-serif;
     }
-
     body {
       background-color: #b9e9e7;
       padding: 40px 20px;
       display: flex;
       justify-content: center;
     }
-
     .main-wrapper {
       width: 100%;
-      max-width: 1400px;
+      max-width: 1240px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      justify-content: center;
+      align-items: start;
+      column-gap: 32px;
+      row-gap: 12px;
     }
-
     .page-title {
+      grid-column: 1 / -1;
       text-align: center;
       font-size: 32px;
       font-weight: bold;
       color: #000000;
-      margin-bottom: 30px;
+      margin-bottom: 12px;
     }
-
     .component-group {
-      margin-bottom: 15px;
+      width: 100%;
+      min-width: 0;
+      margin-bottom: 0;
     }
-
     .component-checkbox {
       display: none;
     }
-
     .component-header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      background-color: #ffffff;
-      padding: 18px 24px;
+      background-color: #0d6efd;
+      min-height: 54px;
+      padding: 12px 10px;
       border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
       font-weight: bold;
-      font-size: 18px;
-      color: #000000;
+      font-size: 16px;
+      color: #ffffff;
       user-select: none;
+      text-align: center;
+      transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
     }
-
     .component-header .header-icon {
+      display: none;
       width: 0;
       height: 0;
       border-left: 6px solid transparent;
@@ -64,8 +72,8 @@
       border-top: 6px solid #c6dfdf;
       transition: transform 0.2s ease;
     }
-
     .component-body {
+      text-align: center;
       max-height: 0;
       overflow: hidden;
       transition:
@@ -73,64 +81,107 @@
         padding 0.3s ease;
       padding: 0 5px;
     }
-
     .component-checkbox:checked ~ .component-body {
+      text-align: center;
       max-height: 2000px;
       padding: 20px 5px;
     }
-
     .component-checkbox:checked ~ .component-header .header-icon {
+      display: none;
       transform: rotate(180deg);
     }
-
     .responsive-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-      gap: 16px;
-    }
-
-    .portfolio-card {
-      background-color: #ffffff;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 10px;
+      width: 100%;
+      padding: 14px;
+      background: #ffffff;
       border-radius: 8px;
-      overflow: hidden;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: inherit;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
     }
-
-    .portfolio-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-    }
-
-    .card-media {
-      background-color: #dedede;
-      height: 120px;
-      width: 100%;
-      overflow: hidden;
+    .portfolio-card {
       display: flex;
-      justify-content: center;
       align-items: center;
-    }
-
-    .card-img {
+      justify-content: center;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-details {
-      padding: 12px;
+      min-width: 0;
+      min-height: 46px;
+      padding: 11px 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #000000;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      box-shadow:
+        0 3px 0 #d7dee8,
+        0 4px 8px rgba(0, 0, 0, 0.08);
       font-size: 14px;
       font-weight: bold;
-      color: #000000;
-      background-color: #aed9e573;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    }
+    .portfolio-card:hover {
+      color: #0d6efd;
+      border-color: #0d6efd;
+      box-shadow:
+        0 5px 0 #c7dafa,
+        0 7px 12px rgba(13, 110, 253, 0.15);
+      transform: translateY(-2px);
+    }
+    .card-media,
+    .card-img {
+      display: none;
+    }
+    .card-details {
+      padding: 0;
+      color: inherit;
+      background: transparent;
+    }
+    @media (max-width: 1000px) {
+      .main-wrapper {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 18px;
+      }
+    }
+    @media (max-width: 640px) {
+      body {
+        padding: 24px 12px;
+      }
+      .main-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+      }
+      .component-header {
+        font-size: 15px;
+        padding: 13px 10px;
+        min-height: 50px;
+      }
+      .page-title {
+        font-size: 26px;
+      }
+      .responsive-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 12px;
+      }
+      .portfolio-card {
+        padding: 12px 9px;
+        font-size: 13px;
+        min-height: 54px;
+      }
+      .card-details {
+        font-size: 13px;
+        padding: 0;
+      }
+    }
+    .component-header:hover {
+      background-color: #0b5ed7;
+      transform: translateY(-1px);
     }
   </style>
 
@@ -380,7 +431,7 @@
               </div>
               <div class="card-details">2D_Drow_page</div>
             </a>
-             <a href="drow2.html" class="portfolio-card">
+            <a href="drow2.html" class="portfolio-card">
               <div class="card-media">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp7Z9qVppnSPuqHSVaGN4VJxG5B7wv-akOSLFYcSZVmBx6XsnLCpEXGj4&s=10"
@@ -390,7 +441,7 @@
               </div>
               <div class="card-details">Drow_page</div>
             </a>
-              <a href="drow3.html" class="portfolio-card">
+            <a href="drow3.html" class="portfolio-card">
               <div class="card-media">
                 <img
                   src="image/DROW3.png"
@@ -400,6 +451,27 @@
               </div>
               <div class="card-details">VIDEO_Drow</div>
             </a>
+          </div>
+        </div>
+      </div>
+      <div class="component-group">
+        <input
+          type="checkbox"
+          id="toggle-section-3"
+          class="component-checkbox"
+        />
+        <label for="toggle-section-3" class="component-header">Bootstrap</label>
+        <div class="component-body">
+          <div class="responsive-grid">
+            <div class="portfolio-card">
+              <div class="card-details">Bootstrap Grid</div>
+            </div>
+            <div class="portfolio-card">
+              <div class="card-details">Bootstrap Buttons</div>
+            </div>
+            <div class="portfolio-card">
+              <div class="card-details">Bootstrap Carousel</div>
+            </div>
           </div>
         </div>
       </div>
